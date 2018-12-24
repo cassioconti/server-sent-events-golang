@@ -2,7 +2,7 @@
 
 Build:
 
-`go build ./...`
+`go build ./server`
 
 Run:
 

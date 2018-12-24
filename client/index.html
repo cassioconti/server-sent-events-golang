@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var client = new EventSource("http://localhost:8080/v1/updates");
+        client.onmessage = (msg) => console.log(msg);
+        client.onopen = (msg) => console.log(msg);
+        client.onerror = (msg) => console.log(msg);
+        client.addEventListener("myEvent", (msg) => console.log(msg));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
